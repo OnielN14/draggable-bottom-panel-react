@@ -175,7 +175,7 @@ const Panel: React.FC = (props) => {
   return (
     <div ref={panelElementRef} className={style.Panel}>
       <header ref={panelHeaderElementRef} onMouseDown={onMouseDown} onTouchStart={onMouseDown}>
-        <div>People</div>
+        <div>Draggable Panel</div>
       </header>
       <main>
         {
