@@ -8,7 +8,6 @@ const EASING = 'easeOutQuad'
 const DURATION = 300
 
 export default function useDraggableNormal ({ style }: PanelType.UseDraggableProp) {
-
   const panelElementRef = React.useRef<HTMLDivElement>(null)
   const panelHeaderElementRef = React.useRef<HTMLElement>(null)
   const currentTopValue = React.useRef(0)
