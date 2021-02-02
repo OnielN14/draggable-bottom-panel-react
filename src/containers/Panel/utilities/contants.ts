@@ -1,0 +1,1 @@
+export const MAX_PANEL_HEIGHT = 300
