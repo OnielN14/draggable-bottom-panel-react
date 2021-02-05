@@ -71,19 +71,19 @@ export default function useDraggableGSAP ({ style }: PanelType.UseDraggableProp)
       trigger: panelHeaderElementRef.current!,
       type: 'y',
       onPress: function(evt) {
-        topLastY = evt.y
+        topLastY = this.y
       },
       onDrag: function(evt) {
-        const diffY = evt.y - topLastY
+        const diffY = this.y - topLastY
 
         GSAP.set(panelElementRef.current!, {
           top: `+=${diffY}`
         })
 
-        topLastY = evt.y
+        topLastY = this.y
       },
       onDragEnd: function (evt) {
-        if ((!isPanelOpen.current && evt.y < calculatedGestureAreaHeight.current) || (isPanelOpen.current && evt.y > calculatedGestureAreaHeight.current)) {
+        if ((!isPanelOpen.current && this.y < calculatedGestureAreaHeight.current) || (isPanelOpen.current && this.y > calculatedGestureAreaHeight.current)) {
           togglePanel()
         } else {
           resetPanelPosition()
